@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="06-04-Gorbatova" />
+        <module name="restaurantAutomation" />
+        <module name="08-04-Gorbatova" />
+        <module name="04-04-Gorbatova" />
+        <module name="07-04-Gorbatova" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

@@ -1,0 +1,45 @@
+.btn-lightred {
+  color: #ffffff;
+  background-color: #E98074;
+  border-color: #E98074;
+}
+
+.btn-lightred:hover,
+.btn-lightred:focus,
+.btn-lightred:active,
+.btn-lightred.active,
+.open .dropdown-toggle.btn-lightred {
+  color: #ffffff;
+  background-color: #E85A4F;
+  border-color: #E98074;
+}
+
+.btn-lightred:active,
+.btn-lightred.active,
+.open .dropdown-toggle.btn-lightred {
+  background-image: none;
+}
+
+.btn-lightred.disabled,
+.btn-lightred[disabled],
+fieldset[disabled] .btn-lightred,
+.btn-lightred.disabled:hover,
+.btn-lightred[disabled]:hover,
+fieldset[disabled] .btn-lightred:hover,
+.btn-lightred.disabled:focus,
+.btn-lightred[disabled]:focus,
+fieldset[disabled] .btn-lightred:focus,
+.btn-lightred.disabled:active,
+.btn-lightred[disabled]:active,
+fieldset[disabled] .btn-lightred:active,
+.btn-lightred.disabled.active,
+.btn-lightred[disabled].active,
+fieldset[disabled] .btn-lightred.active {
+  background-color: #E98074;
+  border-color: #E98074;
+}
+
+.btn-lightred .badge {
+  color: #E98074;
+  background-color: #ffffff;
+}
