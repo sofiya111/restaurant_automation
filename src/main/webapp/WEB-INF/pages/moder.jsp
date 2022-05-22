@@ -49,12 +49,12 @@
     </thead>
       <tbody>
         <c:forEach items="${users}" var="user">
-         <tr onclick="clickModer(this)" data-idUser=${user.id} data-lockStatus=${user.isLockStatus().getName()} data-toggle="modal" data-target="#myModal">
+         <tr onclick="clickModer(this)" data-idUser=${user.id} data-lockStatus=${user.getLockStatus().getName()} data-toggle="modal" data-target="#myModal">
           <td class="align-middle">${user.name}</td>
           <td class="align-middle">${user.role}</td>
           <td class="align-middle">${user.phoneNumber}</td>
           <td class="align-middle">${user.email}</td>
-          <td class="align-middle">${user.isLockStatus()}</td>
+          <td class="align-middle">${user.getLockStatus()}</td>
          </tr>
         </c:forEach>
      </tbody>

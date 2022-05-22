@@ -12,6 +12,7 @@ public interface Command {
     String ESTABLISHMENT_PAGE_PATH = "/WEB-INF/pages/main.jsp";
     String EMPLOYEE_PAGE_PATH = "/WEB-INF/pages/employee.jsp";
     String RESERVATION_PATH = "/WEB-INF/pages/reservation.jsp";
+    String REGISTRAION_PATH = "/WEB-INF/pages/registration.jsp";
     String FOOD_ORDER_PATH = "/WEB-INF/pages/foodOrder.jsp";
     String RESERVATION_FOOD_ORDER_PATH = "/WEB-INF/pages/reservationFoodOrder.jsp";
     String LOGIN_PATH = "/WEB-INF/pages/login.jsp";

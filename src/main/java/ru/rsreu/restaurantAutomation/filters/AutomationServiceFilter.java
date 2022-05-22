@@ -18,6 +18,7 @@ public class AutomationServiceFilter implements Filter {
     private static final String USER_LOCKED_ERROR_MESSAGE = "Пользователь заблокирован";
     private static final String NO_ERROR_MESSAGE = "No error";
     private static final String LOGIN_COMMAND = "Login";
+    private static final String REGISTRATION_COMMAND = "Registration";
 
     @Override
     public void destroy() {
@@ -29,11 +30,12 @@ public class AutomationServiceFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         User user = getUser(request);
         if (user.equals(User.NULL_USER) &&
-                !Objects.equals(req.getParameter(ContextAttributeName.COMMAND_ATTRIBUTE_NAME), LOGIN_COMMAND)) {
+                !Objects.equals(req.getParameter(ContextAttributeName.COMMAND_ATTRIBUTE_NAME), LOGIN_COMMAND)&&
+                !Objects.equals(req.getParameter(ContextAttributeName.COMMAND_ATTRIBUTE_NAME), REGISTRATION_COMMAND)) {
             setErrorAttributes(request, true, USER_LOGGED_IN_ERROR_MESSAGE);
         } else if (user.getAuthorization().equals(Authorization.LOGOUT)) {
             setErrorAttributes(request, true, USER_LOGGED_IN_ERROR_MESSAGE);
-        } else if (user.isLockStatus().equals(LockStatus.LOCK)) {
+        } else if (user.getLockStatus().equals(LockStatus.LOCK)) {
             setErrorAttributes(request, true, USER_LOCKED_ERROR_MESSAGE);
         } else {
             setErrorAttributes(request, false, NO_ERROR_MESSAGE);

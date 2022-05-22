@@ -27,7 +27,7 @@ public class LoginCommand implements Command {
             if (myUserDAO.findUser(login) != null) {
                 user = myUserDAO.findUser(login);
                 String password = req.getParameter(ContextAttributeName.PASSWORD_ATTRIBUTE_NAME);
-                 if (user.isLockStatus().equals(LockStatus.LOCK)) {
+                 if (user.getLockStatus().equals(LockStatus.LOCK)) {
                     req.setAttribute(ContextAttributeName.ERROR_MESSAGE_ATTRIBUTE_NAME, USER_LOCKED_ERROR_MESSAGE);
                     req.getRequestDispatcher(ERROR_PATH).forward(req, resp);
                 } else if (isCorrectPassword(password, user.getPassword())) {

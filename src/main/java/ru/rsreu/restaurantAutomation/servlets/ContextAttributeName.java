@@ -7,6 +7,7 @@ public final class ContextAttributeName {
     public static final String PHONE_NUMBER_ATTRIBUTE_NAME = "phoneNumber";
     public static final String LOGIN_ATTRIBUTE_NAME = "login";
     public static final String PASSWORD_ATTRIBUTE_NAME = "password";
+    public static final String ESTABLISHMENT_ATTRIBUTE_NAME = "establishment";
     public static final String ROLE_ATTRIBUTE_NAME = "role";
     public static final String ID_ATTRIBUTE_NAME = "id";
     public static final String TYPE_ATTRIBUTE_NAME = "type";

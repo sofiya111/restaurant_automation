@@ -8,9 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
-      <link rel="stylesheet" href="<c:url value="/static/login.css" />">
+  <link rel="stylesheet" href="<c:url value="/static/login.css" />">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+<form action="/main" method="POST">
+    <input type="hidden" name="cmd" value="Registration"/>
+    <button onclick="" class="btn btn-info">Регистрация</button><br/><br/>
+</form>
 <form action="/main" method="POST">
 <input type="hidden" name="cmd" value="Login"/>
 <div class='box'>

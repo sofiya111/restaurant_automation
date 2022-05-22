@@ -1,5 +1,10 @@
 package ru.rsreu.restaurantAutomation.datalayer.dto;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.Value;
+
 import java.util.Objects;
 
 /**
@@ -10,34 +15,50 @@ public class User {
     /**
      * user id
      */
+    @Getter
+    @Setter
     private int id;
     /**
      * user name
      */
+    @Getter
+    @Setter
     private String name;
     /**
      * user role
      */
+    @Getter
+    @Setter
     private Role role;
     /**
      * user phone number
      */
+    @Getter
+    @Setter
     private String phoneNumber;
     /**
      * user email
      */
+    @Getter
+    @Setter
     private String email;
     /**
      * user lock status
      */
+    @Getter
+    @Setter
     private LockStatus lockStatus;
     /**
      * user password
      */
+    @Getter
+    @Setter
     private String password;
     /**
      * user authorization
      */
+    @Getter
+    @Setter
     private Authorization authorization;
 
     public User(int id, String name, Role role, String phoneNumber, String email,
@@ -51,76 +72,12 @@ public class User {
         this.password = password;
         this.authorization = authorization;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public LockStatus isLockStatus() {
-        return lockStatus;
-    }
-
-    public void setLockStatus(LockStatus lockStatus) {
-        this.lockStatus = lockStatus;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Authorization getAuthorization() {
-        return authorization;
-    }
-
-    public void setAuthorization(Authorization authorization) {
-        this.authorization = authorization;
-    }
-
     /**
      * not found user
      */
     public static final User NULL_USER = new User(0, "", Role.NOT_FOUND,
             "", "", LockStatus.NOT_FOUND, "", Authorization.NOT_FOUND);
 
-    public String getPassword() {
-        return password;
-    }
 
     @Override
     public boolean equals(Object o) {

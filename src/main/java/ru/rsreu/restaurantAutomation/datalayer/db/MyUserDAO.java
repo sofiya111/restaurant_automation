@@ -36,8 +36,8 @@ public class MyUserDAO  implements UserDAO{
     private static final int PHONE_COLUMN_NUMBER = 4;
     private static final int EMAIL_COLUMN_NUMBER = 5;
     private static final int LOCK_STATUS_COLUMN_NUMBER = 6;
-    private static final int PASSWORD_COLUMN_NUMBER = 7;
-    private static final int AUTHORIZATION_COLUMN_NUMBER = 8;
+    private static final int PASSWORD_COLUMN_NUMBER = 8;
+    private static final int AUTHORIZATION_COLUMN_NUMBER = 7;
     private static final Logger LOGGER = Logger.getLogger(MyUserDAO.class);
     private final DBResourceManager dbResourseManager = DBResourceManager.getInstance();
     private final ConnectionPool connectionPool;
@@ -172,7 +172,7 @@ public class MyUserDAO  implements UserDAO{
             preparedStatement.setString(PHONE_COLUMN_NUMBER - 1, user.getPhoneNumber());
             preparedStatement.setString(EMAIL_COLUMN_NUMBER - 1, user.getEmail());
             preparedStatement.setString(LOCK_STATUS_COLUMN_NUMBER - 1,
-                    getLockStatusString(user.isLockStatus()));
+                    getLockStatusString(user.getLockStatus()));
             preparedStatement.setString(PASSWORD_COLUMN_NUMBER - 1, user.getPassword());
             preparedStatement.setInt(PASSWORD_COLUMN_NUMBER, user.getId());
             preparedStatement.executeUpdate();
