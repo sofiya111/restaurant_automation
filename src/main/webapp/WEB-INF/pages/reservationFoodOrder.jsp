@@ -4,8 +4,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
+    <link rel="stylesheet" href="<c:url value="/static/color.css" />">
     <script type="text/javascript" src="<c:url value="/static/restaurantAutomation.js" />"></script>
     <title>Бронирование столика с выбором меню</title>
 </head>
@@ -15,14 +16,20 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <form action="/main" method="POST">
+            <input type="hidden" name="cmd" value="GetEstablishment"/>
+            <button class="btn btn-lightred"><span>Главная</span></button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <form action="/map" method="POST">
             <input type="hidden" name="cmd" value="StartPage"/>
-            <button class="btn btn-dark"><span>Главная</span></button>
+            <button class="btn btn-lightred"><span>К заведениям</span></button>
           </form>
         </li>
         <li class="nav-item">
           <form action="/menu" method="POST">
             <input type="hidden" name="cmd" value="GetMenu"/>
-            <button class="btn btn-dark"><span>Меню</span></button>
+            <button class="btn btn-lightred"><span>Меню</span></button>
           </form>
         </li>
       </ul>
@@ -30,7 +37,7 @@
         <li class="nav-item">
           <form action="/login" method="POST">
             <input type="hidden" name="cmd" value="PersonalAccount"/>
-            <button class="btn btn-dark"><span>Личный кабинет</span></button>
+            <button class="btn btn-lightred"><span>Личный кабинет</span></button>
           </form>
         </li>
       </ul>
@@ -60,7 +67,7 @@
                <h5 class="card-title">${table.tableNumber}</h5>
                <h6 class="card-text">${table.seatsNumber} мест</h6>
                <div class="btn-group-toggle" data-toggle="buttons">
-                 <label class="btn btn-outline-info" for="btn-check-outlined">
+                 <label class="btn btn-outline-danger" for="btn-check-outlined">
                    <input id="check" type="checkbox" unchecked autocomplete="off"> Выбрать
                  </label>
                </div>
@@ -118,7 +125,7 @@
     <input type="hidden" id="personNumberRes" name="personNumber" type="text" />
     <input type="hidden" id="dateRes" name="date" type="text" />
   </form>
-  <button onclick="confirmResFood()" class="btn btn-dark ">Оформить заказ</button><br/><br/>
+  <button onclick="confirmResFood()" class="btn btn-lightred ">Оформить заказ</button><br/><br/>
   </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

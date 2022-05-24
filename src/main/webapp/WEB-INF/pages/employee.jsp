@@ -4,9 +4,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script type="text/javascript" src="<c:url value="/static/restaurantAutomation.js" />"></script>
+    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
+    <link rel="stylesheet" href="<c:url value="/static/color.css" />">
     <title>Меню</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
         <li class="nav-item">
           <form action="/login" method="POST">
             <input type="hidden" name="cmd" value="PersonalAccount"/>
-            <button class="btn btn-dark"><span>Личный кабинет</span></button>
+            <button class="btn btn-lightred"><span>Личный кабинет</span></button>
           </form>
         </li>
       </ul>
@@ -24,7 +25,7 @@
         <li class="nav-item">
           <form action="/login" method="POST">
             <input type="hidden" name="cmd" value="Logout"/>
-            <button class="btn btn-dark"><span>Выйти</span></button>
+            <button class="btn btn-lightred"><span>Выйти</span></button>
           </form>
         </li>
       </ul>
@@ -32,7 +33,7 @@
   </nav>
   <div class="main">
     <div class="addDish">
-        <button type="button" class="btn btn-dark"
+        <button type="button" class="btn btn-lightred"
           onclick="clickAddDish(this)" data-toggle="modal" data-target="#dishCard">Добавить блюдо</button>
     </div>
     <div class="container col-md-8 mb-3">
@@ -44,10 +45,10 @@
                 <h5 class="card-title">${dish.name}</h5>
                 <p class="card-text">Стоимость</p>
                 <h5 class="card-text" style="text-align:right;">${dish.price}</p></h5>
-                <button class="btn btn-secondary btnDish" onclick="clickEditDish(this)"
+                <button class="btn btn-lightred btnDish" onclick="clickEditDish(this)"
                   data-name=${dish.name} data-price=${dish.price} data-dishId=${dish.id}
                   data-toggle="modal" data-target="#dishCard" >Редактировать</button><br/><br/>
-                <button class="btn btn-secondary btnDish" onclick="clickDeleteDish(this)"
+                <button class="btn btn-lightred btnDish" onclick="clickDeleteDish(this)"
                   data-name=${dish.name} data-price=${dish.price} data-dishId=${dish.id}
                   data-toggle="modal" data-target="#dishCard" >Удалить</button><br/><br/>
               </div>

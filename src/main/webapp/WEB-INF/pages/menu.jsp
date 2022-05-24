@@ -4,8 +4,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
+    <link rel="stylesheet" href="<c:url value="/static/color.css" />">
     <script type="text/javascript" src="<c:url value="/static/restaurantAutomation.js" />"></script>
     <title>Меню</title>
 </head>
@@ -15,14 +16,20 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <form action="/main" method="POST">
+            <input type="hidden" name="cmd" value="GetEstablishment"/>
+            <button class="btn btn-lightred"><span>Главная</span></button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <form action="/map" method="POST">
             <input type="hidden" name="cmd" value="StartPage"/>
-            <button class="btn btn-dark"><span>Главная</span></button>
+            <button class="btn btn-lightred"><span>К заведениям</span></button>
           </form>
         </li>
         <li class="nav-item">
           <form action="/menu" method="POST">
             <input type="hidden" name="cmd" value="GetMenu"/>
-            <button class="btn btn-dark"><span>Меню</span></button>
+            <button class="btn btn-lightred"><span>Меню</span></button>
           </form>
         </li>
       </ul>
@@ -30,13 +37,13 @@
         <li class="nav-item">
           <form action="/foodOrder" method="POST">
             <input type="hidden" name="cmd" value="FoodOrder"/>
-            <button class="btn btn-dark"><span>К заказу</span></button>
+            <button class="btn btn-lightred"><span>К заказу</span></button>
           </form>
         </li>
         <li class="nav-item">
           <form action="/login" method="POST">
             <input type="hidden" name="cmd" value="PersonalAccount"/>
-            <button class="btn btn-dark"><span>Личный кабинет</span></button>
+            <button class="btn btn-lightred"><span>Личный кабинет</span></button>
           </form>
         </li>
       </ul>
@@ -63,7 +70,7 @@
                 <input type="hidden" name="cmd" value="DeleteDish"/><br/>
                 <input class="page" type="hidden" name="page" value="menu"/>
                 <input class="changeType" type="hidden" name="changeType" value="delete"/>
-                <button class="btn btn-secondary btnDish">Убрать</button><br/><br/>
+                <button class="btn btn-lightred btnDish">Убрать</button><br/><br/>
               </div>
             </li>
             </form>
@@ -91,7 +98,7 @@
                    <input type="hidden" name="name" value="${dish.name}"/>
                    <input type="hidden" name="price" value="${dish.price}"/>
                    <input type="hidden" name="cmd" value="AddDish"/>
-                   <button class="btn btn-secondary btnDish">В корзину</button><br/><br/>
+                   <button class="btn btn-lightred btnDish">В корзину</button><br/><br/>
                    </form>
                  </div>
                </div>

@@ -4,10 +4,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
+    <link rel="stylesheet" href="<c:url value="/static/color.css" />">
     <script type="text/javascript" src="<c:url value="/static/restaurantAutomation.js" />"></script>
     <title>Администратор</title>
 </head>
@@ -18,7 +19,7 @@
         <li class="nav-item">
           <form action="/PersonalAccount" method="POST">
             <input type="hidden" name="cmd" value="PersonalAccount"/>
-            <button class="btn btn-dark"><span>Личный кабинет</span></button>
+            <button class="btn btn-lightred"><span>Личный кабинет</span></button>
           </form>
         </li>
       </ul>
@@ -26,7 +27,7 @@
         <li class="nav-item">
           <form action="/login" method="POST">
             <input type="hidden" name="cmd" value="Logout"/>
-            <button class="btn btn-dark"><span>Выйти</span></button>
+            <button class="btn btn-lightred"><span>Выйти</span></button>
           </form>
         </li>
       </ul>
@@ -42,7 +43,7 @@
         </form>
       </div>
       <div class="add">
-        <button type="button" class="btn btn-dark"
+        <button type="button" class="btn btn-lightred"
         onclick="clickAdd(this)" data-toggle="modal" data-target="#myModal">Добавить пользователя</button><br/><br/>
       </div>
     </div>
@@ -75,7 +76,7 @@
                data-email=${user.email} data-password=${user.password} class="align-middle">${user.email}</td>
            <td onclick="clickEdit(this)" data-whatever="Сохранить" data-toggle="modal" data-target="#myModal"
                data-idUser=${user.id} data-name=${user.name} data-role=${user.role} data-phoneNumber=${user.phoneNumber}
-               data-email=${user.email} data-password=${user.password} class="align-middle">${user.isLockStatus().getName()}</td>
+               data-email=${user.email} data-password=${user.password} class="align-middle">${user.getLockStatus().getName()}</td>
            <td class="align-right" style="text-align: center;">
            <button data-whatever="Удалить" onclick="clickDelete(this)" data-toggle="modal" data-target="#myModal" data-name=${user.name}
              data-role=${user.role} data-phoneNumber=${user.phoneNumber} data-email=${user.email} data-idUser=${user.id}

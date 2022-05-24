@@ -1,6 +1,5 @@
 package ru.rsreu.restaurantAutomation.datalayer.commands;
 
-import ru.rsreu.restaurantAutomation.datalayer.dto.User;
 import ru.rsreu.restaurantAutomation.servlets.ContextAttributeName;
 import ru.rsreu.restaurantAutomation.servlets.MyServletException;
 

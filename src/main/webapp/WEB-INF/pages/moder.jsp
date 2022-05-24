@@ -4,9 +4,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
+    <link rel="stylesheet" href="<c:url value="/static/color.css" />">
     <script type="text/javascript" src="<c:url value="/static/restaurantAutomation.js" />"></script>
     <title>Модератор</title>
 </head>
@@ -17,7 +18,7 @@
         <li class="nav-item">
           <form action="/PersonalAccount" method="POST">
             <input type="hidden" name="cmd" value="PersonalAccount"/>
-            <button class="btn btn-dark"><span>Личный кабинет</span></button>
+            <button class="btn btn-lightred"><span>Личный кабинет</span></button>
           </form>
         </li>
       </ul>
@@ -25,7 +26,7 @@
         <li class="nav-item">
           <form action="/login" method="POST">
             <input type="hidden" name="cmd" value="Logout"/>
-            <button class="btn btn-dark"><span>Выйти</span></button>
+            <button class="btn btn-lightred"><span>Выйти</span></button>
           </form>
         </li>
       </ul>
@@ -76,7 +77,7 @@
             <input id="userId" type="hidden" name="id" value=""/>
             <input id="lockStatus" type="hidden" name="lockStatus" value=""/>
             <input type="hidden" name="cmd" value="GetUsersModer"/>
-            <button class="btn btn-primary">Да</button>
+            <button class="btn btn-lightred">Да</button>
           </form>
         </div>
       </div>

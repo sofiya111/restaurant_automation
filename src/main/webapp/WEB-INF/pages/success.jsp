@@ -4,8 +4,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="<c:url value="/static/restaurantAutomation.css" />">
+    <link rel="stylesheet" href="<c:url value="/static/color.css" />">
     <title>Заказ оформлен</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
         <li class="nav-item">
           <form action="/menu" method="POST">
             <input type="hidden" name="cmd" value="GetMenu"/>
-            <button class="btn btn-dark"><span>Меню</span></button>
+            <button class="btn btn-lightred"><span>Меню</span></button>
           </form>
         </li>
       </ul>
@@ -29,7 +30,7 @@
         <li class="nav-item">
           <form action="/login" method="POST">
             <input type="hidden" name="cmd" value="PersonalAccount"/>
-            <button class="btn btn-dark"><span>Личный кабинет</span></button>
+            <button class="btn btn-lightred"><span>Личный кабинет</span></button>
           </form>
         </li>
       </ul>
