@@ -23,7 +23,8 @@ public class AddFoodOrderCommand implements Command {
                 .getAttribute(ContextAttributeName.FOOD_ORDER_DAO_ATTRIBUTE_NAME);
         float price = (float) session.getAttribute(ContextAttributeName.TOTAL_PRICE_ATTRIBUTE_NAME);
         Timestamp orderTime = new Timestamp(System.currentTimeMillis());
-        myFoodOrderDAO.makeFoodOrder(new FoodOrder(user, price, orderTime, dishes));
+        int establishment = (int) session.getAttribute(ContextAttributeName.ESTABLISHMENT_ATTRIBUTE_NAME);
+        myFoodOrderDAO.makeFoodOrder(new FoodOrder(user, price, orderTime, dishes),establishment);
         session.removeAttribute(ContextAttributeName.DISHES_ATTRIBUTE_NAME);
         session.removeAttribute(ContextAttributeName.TOTAL_PRICE_ATTRIBUTE_NAME);
     }

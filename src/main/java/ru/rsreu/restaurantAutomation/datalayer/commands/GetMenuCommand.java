@@ -8,6 +8,7 @@ import ru.rsreu.restaurantAutomation.servlets.MyServletException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,9 @@ public class GetMenuCommand implements Command {
             if (Objects.equals(changeType, ContextAttributeName.ADD_ATTRIBUTE_NAME)) {
                 String name = req.getParameter(ContextAttributeName.NAME_ATTRIBUTE_NAME);
                 float price = Float.parseFloat(req.getParameter(ContextAttributeName.PRICE_ATTRIBUTE_NAME));
-                myMenuDAO.addDish(new Dish(0, name, price));
+                HttpSession session = req.getSession(false);
+                int establishment = (int) session.getAttribute(ContextAttributeName.ESTABLISHMENT_ATTRIBUTE_NAME);
+                myMenuDAO.addDish(new Dish(0, name, price),establishment);
             }
             if (Objects.equals(changeType, ContextAttributeName.EDIT_ATTRIBUTE_NAME)) {
                 int id = Integer.parseInt(req.getParameter(ContextAttributeName.ID_ATTRIBUTE_NAME));

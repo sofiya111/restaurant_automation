@@ -35,4 +35,7 @@ public class DAOFactory {
     public MyFoodOrderDAO getFoodOrderDAO() {
         return new MyFoodOrderDAO(connectionPool);
     }
+    public MyOrderDAO getOrderDAO() {
+        return new MyOrderDAO(connectionPool);
+    }
 }

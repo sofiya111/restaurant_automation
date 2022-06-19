@@ -6,6 +6,7 @@ import ru.rsreu.restaurantAutomation.datalayer.dto.Table;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MyReservationDAO implements ReservationDAO{
@@ -23,8 +24,9 @@ public class MyReservationDAO implements ReservationDAO{
     private static final int TABLE_NUMBER_COLUMN_NUMBER = 2;
     private static final int SEATS_NUMBER_COLUMN_NUMBER = 3;
     private static final int CLIENT_COLUMN_NUMBER = 1;
-    private static final int TIME_COLUMN_NUMBER = 2;
-    private static final int PERSON_NUMBER_COLUMN_NUMBER = 3;
+    private static final int ESTABLISHMENT_COLUMN_NUMBER = 2;
+    private static final int TIME_COLUMN_NUMBER = 3;
+    private static final int PERSON_NUMBER_COLUMN_NUMBER = 4;
     private static final int RESERVATION_COLUMN_NUMBER = 1;
     private static final int FOOD_ORDER_COLUMN_NUMBER = 2;
     private static final int TABLE_COLUMN_NUMBER = 2;
@@ -78,12 +80,13 @@ public class MyReservationDAO implements ReservationDAO{
         }
     }
 
-    public void makeReservation(Reservation reservation) {
+    public void makeReservation(Reservation reservation, int establishment) {
         try (Connection connection = connectionPool.takeConnection();
              PreparedStatement preparedStatement =
                      connection.prepareStatement(dbResourseManager.getQuery(RESERVATION_QUERY))) {
             preparedStatement.setInt(CLIENT_COLUMN_NUMBER, reservation.getClient().getId());
             Timestamp reservationTime = new Timestamp(reservation.getReservationTime().getTime() + THREE_HOURS);
+            preparedStatement.setInt(ESTABLISHMENT_COLUMN_NUMBER, establishment);
             preparedStatement.setTimestamp(TIME_COLUMN_NUMBER, new java.sql.Timestamp(reservationTime.getTime()));
             preparedStatement.setInt(PERSON_NUMBER_COLUMN_NUMBER, reservation.getPersonNumber());
             preparedStatement.executeUpdate();

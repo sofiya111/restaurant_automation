@@ -15,7 +15,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <form action="/main" method="POST">
-            <input type="hidden" name="cmd" value="GetEstablishment"/>
+            <input type="hidden" name="cmd" value="Establishment"/>
             <button class="btn btn-lightred"><span>Главная</span></button>
           </form>
         </li>
@@ -42,6 +42,12 @@
       </ul>
     </div>
   </nav>
+  <form action="/users" method="POST">
+    <input type="hidden" name="cmd" value="GetOrdersHistory"/>
+    <div class="main" style="float:right;">
+      <button class="btn btn-lightred">История заказов</button><br/><br/>
+    </div>
+  </form>
 <dl class="personalInfo">
   <dt>Имя</dt>
     <dd>${user.name}</dd>
@@ -50,5 +56,6 @@
   <dt>Почта</dt>
     <dd>${user.email}</dd>
 </dl>
+
 </body>
 </html>

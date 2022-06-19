@@ -19,6 +19,7 @@ public class AutomationServiceFilter implements Filter {
     private static final String NO_ERROR_MESSAGE = "No error";
     private static final String LOGIN_COMMAND = "Login";
     private static final String REGISTRATION_COMMAND = "Registration";
+    private static final String SAVE_COMMAND = "SaveUser";
 
     @Override
     public void destroy() {
@@ -29,9 +30,11 @@ public class AutomationServiceFilter implements Filter {
             throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         User user = getUser(request);
+        HttpSession session = req.getSession(false);
         if (user.equals(User.NULL_USER) &&
                 !Objects.equals(req.getParameter(ContextAttributeName.COMMAND_ATTRIBUTE_NAME), LOGIN_COMMAND)&&
-                !Objects.equals(req.getParameter(ContextAttributeName.COMMAND_ATTRIBUTE_NAME), REGISTRATION_COMMAND)) {
+                !Objects.equals(req.getParameter(ContextAttributeName.COMMAND_ATTRIBUTE_NAME), REGISTRATION_COMMAND)&&
+                !Objects.equals(req.getParameter(ContextAttributeName.COMMAND_ATTRIBUTE_NAME), SAVE_COMMAND)) {
             setErrorAttributes(request, true, USER_LOGGED_IN_ERROR_MESSAGE);
         } else if (user.getAuthorization().equals(Authorization.LOGOUT)) {
             setErrorAttributes(request, true, USER_LOGGED_IN_ERROR_MESSAGE);

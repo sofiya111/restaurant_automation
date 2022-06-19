@@ -113,6 +113,8 @@ public class FrontController extends HttpServlet {
         setContext(context, myReservationDAO, ContextAttributeName.RESERVATION_DAO_ATTRIBUTE_NAME);
         MyFoodOrderDAO myFoodOrderDAO = daoFactory.getFoodOrderDAO();
         setContext(context, myFoodOrderDAO, ContextAttributeName.FOOD_ORDER_DAO_ATTRIBUTE_NAME);
+        MyOrderDAO myOrderDAO = daoFactory.getOrderDAO();
+        setContext(context, myOrderDAO, ContextAttributeName.ORDER_DAO_ATTRIBUTE_NAME);
     }
 
     /**

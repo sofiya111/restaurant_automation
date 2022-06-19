@@ -23,13 +23,14 @@
     <div class='box-login'>
       <div class='fieldset-body' id='login_form'>
         <p class='field'>
+          <input type='text' class="error" value='${error}' readonly/>
           <label for='user'>ЛОГИН</label>
-          <input type='text' id='user' required minlength=4 name='login' title='Логин' />
+          <input type='text' class="inputField" id='user' required minlength=4 name='login' title='Логин' />
           <span id='valida' class='i i-warning'></span>
         </p>
       	<p class='field'>
           <label for='pass'>ПАРОЛЬ</label>
-          <input type='password' id='password' minlength=4 required name='password' title='Пароль' />
+          <input type='password'class="inputField" id='password' minlength=4 required name='password' title='Пароль' />
           <span id='valida' class='i i-close'></span>
         </p>
         <input type='submit' id='do_login' value='Войти' title='Войти' />

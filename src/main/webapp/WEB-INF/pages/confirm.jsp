@@ -16,7 +16,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <form action="/main" method="POST">
-            <input type="hidden" name="cmd" value="GetEstablishment"/>
+            <input type="hidden" name="cmd" value="Establishment"/>
             <button class="btn btn-lightred"><span>Главная</span></button>
           </form>
         </li>
@@ -44,16 +44,7 @@
     </div>
   </nav>
     <div class="main">
-    <form action="/personalAccount" method="POST">
-    <h4>Заказ успешно оформлен!</h4></br>
-      Номер заказа: 34<br/><br/>
-      Имя: Иван<br/><br/>
-      Телефон: 89005005050 <br/><br/>
-      Email: ivan202@gmail.com<br/><br/>
-      Количество персон: 5<br/><br/>
-      Дата и время бронирования: 31.03.2022 10:33<br/><br/>
-      Номер столика: 10<br/><br/>
-    </form>
+    <h4>Заказ успешно оформлен!</h4>
     </div>
 </body>
 </html>

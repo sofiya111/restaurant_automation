@@ -19,7 +19,7 @@ public interface MenuDAO {
      * Add dish
      * @param dish dish to add
      */
-    void addDish(Dish dish);
+    void addDish(Dish dish,int establishment);
 
     /**
      * Delete dish

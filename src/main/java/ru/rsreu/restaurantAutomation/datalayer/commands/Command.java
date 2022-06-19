@@ -18,13 +18,16 @@ public interface Command {
     String LOGIN_PATH = "/WEB-INF/pages/login.jsp";
     String ERROR_PATH = "/WEB-INF/pages/error.jsp";
     String ADMIN_PATH = "/WEB-INF/pages/admin.jsp";
-    String CONFIRM_ORDER_PATH = "/WEB-INF/pages/success.jsp";
+    String ORDERS_EMPLOYEE_PATH = "/WEB-INF/pages/employeeOrders.jsp";
+    String ORDERS_USER_PATH = "/WEB-INF/pages/userOrders.jsp";
+    String CONFIRM_ORDER_PATH = "/WEB-INF/pages/confirm.jsp";
     String MENU_PATH = "/WEB-INF/pages/menu.jsp";
     String PERSONAL_ACCOUNT_USER_PATH = "/WEB-INF/pages/personalAccountUser.jsp";
     String PERSONAL_ACCOUNT_PATH = "/WEB-INF/pages/personalAccount.jsp";
     String UNKNOWN_CHAT_PATH = "/WEB-INF/pages/error.jsp";
     String MODER_PAGE_PATH = "/WEB-INF/pages/moder.jsp";
     String START_PAGE_REDIRECT_PATH = "/";
+    String LOGIN_PAGE_REDIRECT_PATH = "/login";
     String RESERVATION_FOOD_ORDER_PAGE_REDIRECT_PATH = "/reservationFoodOrder";
 
     void execute(HttpServletRequest req, HttpServletResponse resp);

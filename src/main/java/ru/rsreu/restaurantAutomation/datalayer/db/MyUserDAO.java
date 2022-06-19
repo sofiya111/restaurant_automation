@@ -154,7 +154,7 @@ public class MyUserDAO  implements UserDAO{
             preparedStatement.setInt(ROLE_COLUMN_NUMBER - 1, user.getRole().getNumber());
             preparedStatement.setString(PHONE_COLUMN_NUMBER - 1, user.getPhoneNumber());
             preparedStatement.setString(EMAIL_COLUMN_NUMBER - 1, user.getEmail());
-            preparedStatement.setString(PASSWORD_COLUMN_NUMBER - 2, user.getPassword());
+            preparedStatement.setString(PASSWORD_COLUMN_NUMBER - 3, user.getPassword());
             preparedStatement.executeUpdate();
         } catch (
                 SQLException e) {

@@ -147,3 +147,31 @@ function changeReservFoodOrder(el){
     el.querySelectorAll('.changeType')[0].setAttribute("value","change");
     el.querySelectorAll('.formTable')[0].submit();
 }
+
+function clickGetTables(el){
+    click(el);
+}
+
+	$("#passwordCheck").on("keyup", function() {
+		var value_input1 = $("#password").val();
+		var value_input2 = $(this).val();
+		if(value_input1 != value_input2) {
+            console.log("ff")
+			$(".error").html("Пароли не совпадают!");
+		} else {
+			$(".error").html("");
+		}
+	});
+
+function ver() {
+    var value_input1 = $("#password").val();
+    var value_input2 = $("#passwordCheck").val();
+    var flag=1;
+    if(value_input1 != value_input2){
+        alert('Пароли не совпадают!');
+        flag=0;
+    }
+    if(flag == 1) {
+        $('#form').submit();
+    };
+}

@@ -40,7 +40,8 @@ public class AddReservationCommand implements Command {
             }
         }
         List<Table> tables = myReservationDAO.findTables(tableNumber);
-        myReservationDAO.makeReservation(new Reservation(user, timestamp, personNumber, tables));
+        int establishment = (int) session.getAttribute(ContextAttributeName.ESTABLISHMENT_ATTRIBUTE_NAME);
+        myReservationDAO.makeReservation(new Reservation(user, timestamp, personNumber, tables),establishment);
         session.removeAttribute(ContextAttributeName.DATE_ATTRIBUTE_NAME);
         session.removeAttribute(ContextAttributeName.PERSON_NUMBER_ATTRIBUTE_NAME);
         session.removeAttribute(ContextAttributeName.TABLES_ATTRIBUTE_NAME);

@@ -16,6 +16,9 @@ public class GetEstablishmentCommand implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) {
         try {
+            int establishment = Integer.parseInt(req.getParameter(ContextAttributeName.ESTABLISHMENT_ATTRIBUTE_NAME));
+            HttpSession session = req.getSession(false);
+            session.setAttribute(ContextAttributeName.ESTABLISHMENT_ATTRIBUTE_NAME, establishment);
             req.getRequestDispatcher(ESTABLISHMENT_PAGE_PATH).forward(req, resp);
         } catch (ServletException | IOException e) {
             throw new MyServletException(SERVLET_EXCEPTION_MESSAGE, e);

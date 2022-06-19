@@ -27,7 +27,7 @@ public interface ReservationDAO {
      * Make reservation
      * @param reservation
      */
-    void makeReservation(Reservation reservation);
+    void makeReservation(Reservation reservation,int establishment);
 
     /**
      * Find tables

@@ -34,21 +34,27 @@
       <ul class="nav">
         <li class="nav-item">
           <form action="/foodOrder" method="POST">
-            <input type="hidden" name="cmd" value="FoodOrder"/>
+            <input type="hidden" name="cmd" value="Establishment"/>
             <button class="btn btn-lightred"><span>К заказу</span></button>
           </form>
         </li>
         <li class="nav-item">
           <form action="/login" method="POST">
-            <input type="hidden" name="cmd" value="PersonalAccount"/>
+            <input type="hidden" name="cmd" value="PersonalAccount" />
             <button class="btn btn-lightred"><span>Личный кабинет</span></button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <form action="/login" method="POST">
+            <input type="hidden" name="cmd" value="Logout"/>
+            <button class="btn btn-lightred"><span>Выйти</span></button>
           </form>
         </li>
       </ul>
     </div>
   </nav>
   <form action="/order" method="POST">
-    <input type="hidden" name="cmd" value="Establishment"/>
+    <input type="hidden" name="cmd" value="GetEstablishment"/>
     <div id="map"></div>
   </form>
 </body>

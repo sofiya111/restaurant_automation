@@ -8,6 +8,10 @@ import java.util.List;
  */
 public class Reservation {
     /**
+     * id
+     */
+    private int id;
+    /**
      * client
      */
     private User client;
@@ -23,12 +27,24 @@ public class Reservation {
      * tables for reservation
      */
     private List<Table> tables;
+    /**
+     * establishment
+     */
+    private String establishment;
 
     public Reservation(User client, Timestamp reservationTime, int personNumber, List<Table> tables) {
         this.client = client;
         this.reservationTime = reservationTime;
         this.personNumber = personNumber;
         this.tables = tables;
+    }
+
+    public Reservation(User client, Timestamp reservationTime, int personNumber, List<Table> tables, String establishment) {
+        this.client = client;
+        this.reservationTime = reservationTime;
+        this.personNumber = personNumber;
+        this.tables = tables;
+        this.establishment = establishment;
     }
 
     public List<Table> getTables() {
@@ -61,5 +77,21 @@ public class Reservation {
 
     public void setPersonNumber(int personNumber) {
         this.personNumber = personNumber;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEstablishment() {
+        return establishment;
+    }
+
+    public void setEstablishment(String establishment) {
+        this.establishment = establishment;
     }
 }

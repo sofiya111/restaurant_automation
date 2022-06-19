@@ -15,7 +15,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <form action="/main" method="POST">
-            <input type="hidden" name="cmd" value="GetEstablishment"/>
+            <input type="hidden" name="cmd" value="Establishment"/>
             <button class="btn btn-lightred"><span>Главная</span></button>
           </form>
         </li>

@@ -9,7 +9,8 @@ public interface FoodOrderDAO {
 
     /**
      * Make food order
+     *
      * @param foodOrder
      */
-    void makeFoodOrder(FoodOrder foodOrder);
+    void makeFoodOrder(FoodOrder foodOrder, int establishment);
 }

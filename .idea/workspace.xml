@@ -5,31 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa8eda5f-9c0b-4fe4-a4a3-6c726e04085d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetEstablishmentCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/main.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetOrdersHistoryCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetTableCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/LoginPageCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/OrdersCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/SaveUserCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/OrderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employeeOrders.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/userOrders.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/AddFoodOrderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/AddFoodOrderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/AddReservationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/AddReservationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/EstablishmentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/EstablishmentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetEstablishmentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetEstablishmentCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetMenuCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetMenuEmployeeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/GetMenuEmployeeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/StartPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/commands/StartPageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/DAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/FoodOrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/FoodOrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MenuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MenuDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MyFoodOrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MyFoodOrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MyMenuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MyMenuDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MyReservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MyReservationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MyUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/MyUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/ReservationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/db/ReservationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/dto/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/datalayer/dto/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/filters/AutomationServiceFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/filters/AutomationServiceFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/servlets/ContextAttributeName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/servlets/ContextAttributeName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/servlets/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/rsreu/restaurantAutomation/servlets/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/queries.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/queries.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/confirm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/confirm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/employee.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/foodOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/foodOrder.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/map.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/moder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/moder.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/orderConfirmation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/orderConfirmation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalAccount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalAccountUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalAccountUser.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/reservation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/reservation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/reservationFoodOrder.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/reservationFoodOrder.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/success.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/success.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/foodOrder.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/foodOrder.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/res.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/res.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/resFood.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/resFood.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/restaurantAutomation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/restaurantAutomation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/queries.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/queries.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,19 +96,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.1484375" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="com.poratu.idea.plugins.tomcat.setting.TomcatSettingConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sonya\OneDrive\Documents\вкр\github\restaurant_automation\src\main\webapp\WEB-INF\pages" />
       <recent name="C:\Users\Sonya\OneDrive\Documents\вкр\github\restaurant_automation\src\main\webapp\static" />
       <recent name="C:\Users\Sonya\OneDrive\Documents\ПАПС\restaurant service automation\08-04-Gorbatova\src\main\webapp\WEB-INF\pages" />
       <recent name="C:\Users\Sonya\OneDrive\Documents\java\02-04-Gorbatova\06-04-Gorbatova\src\main\webapp\static" />
       <recent name="C:\Users\Sonya\OneDrive\Documents\java\02-04-Gorbatova\06-04-Gorbatova\src\main\webapp\WEB-INF\pages" />
-      <recent name="C:\Users\Sonya\OneDrive\Documents\java\02-04-Gorbatova\03-04-Gorbatova\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sonya\OneDrive\Documents\java\02-04-Gorbatova\06-04-Gorbatova\src\main\webapp\static" />
@@ -94,10 +116,10 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.rsreu.restaurantAutomation.datalayer.commands" />
+      <recent name="ru.rsreu.restaurantAutomation.datalayer.db" />
       <recent name="ru.rsreu.gorbatova0804.datalayer.commands" />
       <recent name="ru.rsreu.gorbatova0704.datalayer.db" />
       <recent name="ru.rsreu.gorbatova0604.datalayer.commands" />
-      <recent name="ru.rsreu.gorbatova0604.datalayer.db" />
     </key>
   </component>
   <component name="RunManager">
@@ -105,9 +127,7 @@
       <option name="adminPort" value="8005" />
       <option name="contextPath" value="/" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
+      <option name="envOptions" />
       <option name="passParentEnvironmentVariables" value="true" />
       <option name="port" value="8080" />
       <option name="tomcatInfo">

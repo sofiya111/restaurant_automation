@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyMenuDAO implements MenuDAO{
+public class MyMenuDAO implements MenuDAO {
     private static final String GET_MENU_QUERY = "db.query.get_menu";
     private static final String ADD_DISH_QUERY = "db.query.add_dish";
     private static final String DELETE_DISH_QUERY = "db.query.delete_dish";
@@ -19,6 +19,7 @@ public class MyMenuDAO implements MenuDAO{
     private static final int ID_COLUMN_NUMBER = 1;
     private static final int NAME_COLUMN_NUMBER = 2;
     private static final int PRICE_COLUMN_NUMBER = 3;
+    private static final int ESTABLISHMENT_COLUMN_NUMBER = 3;
     private static final Logger LOGGER = Logger.getLogger(MyMenuDAO.class);
     private final DBResourceManager dbResourseManager = DBResourceManager.getInstance();
     private final ConnectionPool connectionPool;
@@ -52,12 +53,13 @@ public class MyMenuDAO implements MenuDAO{
         return new Dish(id, name, price);
     }
 
-    public void addDish(Dish dish) {
+    public void addDish(Dish dish, int establishment) {
         try (Connection connection = connectionPool.takeConnection();
              PreparedStatement preparedStatement =
                      connection.prepareStatement(dbResourseManager.getQuery(ADD_DISH_QUERY))) {
             preparedStatement.setString(NAME_COLUMN_NUMBER - 1, dish.getName());
             preparedStatement.setFloat(PRICE_COLUMN_NUMBER - 1, dish.getPrice());
+            preparedStatement.setInt(ESTABLISHMENT_COLUMN_NUMBER, establishment);
             preparedStatement.executeUpdate();
         } catch (
                 SQLException e) {

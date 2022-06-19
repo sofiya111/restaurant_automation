@@ -18,9 +18,9 @@ public class StartPageCommand implements Command {
     @Override
     public void execute(HttpServletRequest req, HttpServletResponse resp) {
         try {
-            HttpSession session = req.getSession(true);
+            HttpSession session = req.getSession(false);
             User user = (User) session.getAttribute(ContextAttributeName.USER_ATTRIBUTE_NAME);
-            if (user.getRole().equals(Role.USER)) {
+            if (user.getRole().equals(Role.USER) || user.getRole().equals(Role.NOT_FOUND)) {
                 req.getRequestDispatcher(START_PAGE_PATH).forward(req, resp);
             } else if (user.getRole().equals(Role.ADMIN)) {
                 Command command = new GetUsersCommand();

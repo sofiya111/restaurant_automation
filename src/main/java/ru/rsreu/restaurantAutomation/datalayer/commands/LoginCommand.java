@@ -47,9 +47,11 @@ public class LoginCommand implements Command {
                         command.execute(req, resp);
                     }
                 } else {
-                    req.getRequestDispatcher(LOGIN_PATH).forward(req, resp);
+                     req.setAttribute("error","Password is incorrect");
+                     req.getRequestDispatcher(LOGIN_PATH).forward(req, resp);
                 }
             } else {
+                req.setAttribute("error","Login is incorrect");
                 req.getRequestDispatcher(LOGIN_PATH).forward(req, resp);
             }
         } catch (ServletException e) {

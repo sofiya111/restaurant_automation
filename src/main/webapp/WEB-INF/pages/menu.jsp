@@ -16,7 +16,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <form action="/main" method="POST">
-            <input type="hidden" name="cmd" value="GetEstablishment"/>
+            <input type="hidden" name="cmd" value="Establishment"/>
             <button class="btn btn-lightred"><span>Главная</span></button>
           </form>
         </li>
@@ -35,15 +35,15 @@
       </ul>
       <ul class="nav">
         <li class="nav-item">
-          <form action="/foodOrder" method="POST">
-            <input type="hidden" name="cmd" value="FoodOrder"/>
-            <button class="btn btn-lightred"><span>К заказу</span></button>
+          <form action="/login" method="POST">
+            <input type="hidden" name="cmd" value="PersonalAccount"/>
+            <button class="btn btn-lightred"><span>Личный кабинет</span></button>
           </form>
         </li>
         <li class="nav-item">
           <form action="/login" method="POST">
-            <input type="hidden" name="cmd" value="PersonalAccount"/>
-            <button class="btn btn-lightred"><span>Личный кабинет</span></button>
+            <input type="hidden" name="cmd" value="Logout"/>
+            <button class="btn btn-lightred"><span>Выйти</span></button>
           </form>
         </li>
       </ul>

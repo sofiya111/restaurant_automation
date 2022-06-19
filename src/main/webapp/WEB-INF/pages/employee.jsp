@@ -23,6 +23,12 @@
       </ul>
       <ul class="nav">
         <li class="nav-item">
+          <form action="/orders" method="POST">
+            <input type="hidden" name="cmd" value="Orders"/>
+            <button class="btn btn-lightred"><span>Заказы</span></button>
+          </form>
+        </li>
+        <li class="nav-item">
           <form action="/login" method="POST">
             <input type="hidden" name="cmd" value="Logout"/>
             <button class="btn btn-lightred"><span>Выйти</span></button>

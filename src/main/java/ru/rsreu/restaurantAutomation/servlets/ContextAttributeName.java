@@ -39,6 +39,7 @@ public final class ContextAttributeName {
     public static final String ERROR_MESSAGE_ATTRIBUTE_NAME = "errorMessage";
     public static final String RESERVATION_DAO_ATTRIBUTE_NAME = "reservationDAO";
     public static final String FOOD_ORDER_DAO_ATTRIBUTE_NAME = "foodOrderDAO";
+    public static final String ORDER_DAO_ATTRIBUTE_NAME = "OrderDAO";
 
     private ContextAttributeName() {
 
